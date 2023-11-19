@@ -1,0 +1,79 @@
+<!--<web-app>-->
+<!--    &lt;!&ndash; Registration Servlet Mapping &ndash;&gt;-->
+<!--    <servlet>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <servlet-class>RegisterServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <url-pattern>/RegisterServlet</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    &lt;!&ndash; Login Servlet Mapping &ndash;&gt;-->
+<!--    <servlet>-->
+<!--        <servlet-name>LoginServlet</servlet-name>-->
+<!--        <servlet-class>LoginServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>LoginServlet</servlet-name>-->
+<!--        <url-pattern>/LoginServlet</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    &lt;!&ndash; Filter Mapping &ndash;&gt;-->
+<!--    <filter>-->
+<!--        <filter-name>AuthFilter</filter-name>-->
+<!--        <filter-class>AuthFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>AuthFilter</filter-name>-->
+<!--        <url-pattern>/welcome.jsp</url-pattern>-->
+<!--    </filter-mapping>-->
+<!--</web-app>-->
+        <!-- RegisterServlet Mapping -->
+<web-app>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.example.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+        <!-- LoginServlet Mapping -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter Mapping -->
+<filter>
+<filter-name>AuthFilter</filter-name>
+<filter-class>AuthFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>AuthFilter</filter-name>
+<url-pattern>/welcome.jsp</url-pattern>
+</filter-mapping>
+
+        <!-- Context Parameters for JDBC -->
+<context-param>
+<param-name>jdbcUrl</param-name>
+<param-value>jdbc:mysql://localhost:3306/your_database</param-value>
+</context-param>
+<context-param>
+<param-name>jdbcUser</param-name>
+<param-value>your_username</param-value>
+</context-param>
+<context-param>
+<param-name>jdbcPassword</param-name>
+<param-value>your_password</param-value>
+</context-param>
+<context-param>
+<param-name>jdbcDriver</param-name>
+<param-value>com.mysql.cj.jdbc.Driver</param-value>
+</context-param>
+</web-app>
